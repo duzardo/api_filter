@@ -1,0 +1,323 @@
+AccessibilityEvent: (
+             mapId: 39_android.widget.FrameLayout_null_null
+             nodeId: com.android.systemui:id/navigation_bar_view
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996559
+             Package Name: com.android.systemui
+             Event Type: EventType.typeWindowContentChanged
+             Captured Text: null
+             content Change Types: ContentChangeTypes.contentChangeTypeSubtree
+             Movement Granularity: 0
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: false
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 0 - right: 1080 - top: 2270 - bottom: 2400 - width: 1080 - height: 130
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+             subNodes: [AccessibilityEvent: (
+             mapId: 39_android.widget.FrameLayout_null_null
+             nodeId: com.android.systemui:id/navigation_bar_view
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996710
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 0 - right: 1080 - top: 2270 - bottom: 2400 - width: 1080 - height: 130
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.FrameLayout_null_null
+             nodeId: com.android.systemui:id/navigation_inflater
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996790
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 0 - right: 1077 - top: 2270 - bottom: 2397 - width: 1077 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.FrameLayout_null_null
+             nodeId: com.android.systemui:id/horizontal
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996832
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 46 - right: 1028 - top: 2270 - bottom: 2397 - width: 982 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.FrameLayout_null_null
+             nodeId: com.android.systemui:id/nav_buttons
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996867
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 68 - right: 1006 - top: 2270 - bottom: 2397 - width: 938 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.LinearLayout_null_null
+             nodeId: com.android.systemui:id/ends_group
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996900
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 68 - right: 1006 - top: 2270 - bottom: 2397 - width: 938 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.RelativeLayout_null_null
+             nodeId: null
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996941
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 68 - right: 185 - top: 2270 - bottom: 2397 - width: 117 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.RelativeLayout_null_null
+             nodeId: null
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.996972
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 185 - right: 419 - top: 2270 - bottom: 2397 - width: 234 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.ImageView_null_Visão geral
+             nodeId: com.android.systemui:id/recent_apps
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.997004
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: true
+             is Scrollable: false
+             is Focusable: true
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 219 - right: 384 - top: 2270 - bottom: 2397 - width: 165 - height: 127
+             actions: [NodeAction.actionFocus, NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.actionNextAtMovementGranularity, NodeAction.actionPreviousAtMovementGranularity, NodeAction.actionSetSelection, NodeAction.unknown, NodeAction.actionClick]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.RelativeLayout_null_null
+             nodeId: null
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.997050
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 653 - right: 888 - top: 2270 - bottom: 2397 - width: 235 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.ImageView_null_Voltar
+             nodeId: com.android.systemui:id/back
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.997084
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: true
+             is Scrollable: false
+             is Focusable: true
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 688 - right: 853 - top: 2270 - bottom: 2397 - width: 165 - height: 127
+             actions: [NodeAction.actionFocus, NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.actionNextAtMovementGranularity, NodeAction.actionPreviousAtMovementGranularity, NodeAction.actionSetSelection, NodeAction.unknown, NodeAction.actionClick]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.RelativeLayout_null_null
+             nodeId: null
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.997137
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 888 - right: 1006 - top: 2270 - bottom: 2397 - width: 118 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.LinearLayout_null_null
+             nodeId: com.android.systemui:id/center_group
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.997179
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: false
+             is Scrollable: false
+             is Focusable: false
+             is Checkable: false
+             is LongClickable: false
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 454 - right: 619 - top: 2270 - bottom: 2397 - width: 165 - height: 127
+             actions: [NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.unknown]
+
+             ), AccessibilityEvent: (
+             mapId: 39_android.widget.ImageView_null_Página inicial
+             nodeId: com.android.systemui:id/home
+             Action Type: NodeAction.unknown
+             Event Time: 2025-08-13 11:16:38.997279
+             Package Name: null
+             Event Type: null
+             Captured Text: null
+             content Change Types: null
+             Movement Granularity: null
+             Is Active: false
+             is focused: false
+             is Clickable: true
+             is Scrollable: false
+             is Focusable: true
+             is Checkable: false
+             is LongClickable: true
+             is Editable: false
+             in Pip: null
+             window Type: WindowType.typeSystem
+             Screen bounds: left: 454 - right: 619 - top: 2270 - bottom: 2397 - width: 165 - height: 127
+             actions: [NodeAction.actionFocus, NodeAction.actionSelect, NodeAction.actionClearSelection, NodeAction.actionAccessibilityFocus, NodeAction.actionNextAtMovementGranularity, NodeAction.actionPreviousAtMovementGranularity, NodeAction.actionSetSelection, NodeAction.unknown, NodeAction.actionClick, NodeAction.actionLongClick]
+
+             )]
+             )
