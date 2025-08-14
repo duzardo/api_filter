@@ -1,28 +1,26 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from configparser import ConfigParser
-from api_em_db import APIdb
-from filter import process_whatsapp_data
+from message_processor import MessageProcessor
 
 app = Flask(__name__)
 CORS(app)
 
 @app.route('/process', methods=['POST'])
 def process_accessibility_data():
-    """Processa dados de acessibilidade e filtra mensagens do WhatsApp"""
+    """Processa dados de acessibilidade e envia para Cromos + salva no banco"""
     try:
         data = request.get_json()
         
         if not data:
             return jsonify({'error': 'Nenhum dado fornecido'}), 400
         
-        # Processa e filtra mensagens do WhatsApp
-        result = process_whatsapp_data(data)
+        # Delega todo processamento para MessageProcessor
+        processor = MessageProcessor()
+        result = processor.process_accessibility_data(data)
         
+        # Retorna resultado do processamento
         if result['status'] == 'error':
             return jsonify(result), 500
-        
-        # TODO: Salvar no banco de dados usando APIdb
         
         return jsonify(result)
         
