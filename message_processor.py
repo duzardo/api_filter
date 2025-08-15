@@ -1,8 +1,87 @@
 import requests
 import json
+import re
 from datetime import datetime
 from api_em_db import APIdb
-from filter import process_whatsapp_data
+
+
+def extract_message_text(captured_text):
+    if not captured_text or captured_text == "null":
+        return None
+    
+    match = re.search(r"mText:\s*([^}]+)", captured_text)
+    if match:
+        return match.group(1).strip()
+    return None
+
+
+def parse_screen_bounds(screen_bounds_str):
+    if not screen_bounds_str:
+        return {}
+
+    bounds_match = re.search(
+        r"left:\s*(\d+)\s*-\s*right:\s*(\d+)\s*-\s*top:\s*(\d+)\s*-\s*bottom:\s*(\d+)",
+        screen_bounds_str,
+    )
+
+    if bounds_match:
+        left = int(bounds_match.group(1))
+        right = int(bounds_match.group(2))
+        top = int(bounds_match.group(3))
+        bottom = int(bounds_match.group(4))
+
+        return {
+            "left": left,
+            "right": right,
+            "top": top,
+            "bottom": bottom,
+            "width": right - left,
+            "height": bottom - top,
+        }
+
+    return {}
+
+
+def filter_whatsapp_messages(accessibility_events):
+    messages = []
+
+    for event in accessibility_events:
+        if event.get("nodeId") == "com.whatsapp:id/message_text" and event.get(
+            "Captured Text"
+        ):
+
+            message_text = extract_message_text(event.get("Captured Text"))
+
+            if message_text:
+                bounds = parse_screen_bounds(event.get("Screen bounds", ""))
+
+                message = {
+                    "captured_text": message_text,
+                    "event_time": event.get("Event Time"),
+                    "node_id": event.get("nodeId"),
+                    "screen_bounds": bounds,
+                }
+
+                messages.append(message)
+
+    return messages
+
+
+def process_whatsapp_data(raw_data):
+    try:
+        if isinstance(raw_data, str):
+            raw_data = json.loads(raw_data)
+
+        filtered_messages = filter_whatsapp_messages(raw_data.get("events", []))
+
+        return {
+            "status": "success",
+            "messages_found": len(filtered_messages),
+            "messages": filtered_messages,
+        }
+
+    except Exception as e:
+        return {"status": "error", "error": str(e)}
 
 
 class MessageProcessor:
@@ -72,12 +151,17 @@ class MessageProcessor:
                     
                     if cromos_result['success']:
                         # 2. Se envio para Cromos foi bem-sucedido, salva no banco local
-                        # Extrai campos necessários (usa valores padrão se não existirem)
-                        device_id = message_data.get('phone_number', 'unknown')
-                        contact_phone = message_data.get('contact_phone_number', 'unknown')
-                        custom_id = message_data.get('message_custom_id', f'msg_{idx}')
+                        # Campos que virão dos dados reais
+                        device_id = message_data.get('device_id', 'UNKNOWN_DEVICE')
+                        contact_phone = message_data.get('contact_phone_number', 'UNKNOWN_CONTACT')
+                        returned = message_data.get('returned', True)
+                        returned_at = message_data.get('returned_at', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+                        
+                        # Campos gerados automaticamente
+                        current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        custom_id = f"{device_id}_{int(datetime.now().timestamp())}_{idx}"
                         order = idx + 1
-                        schedule = message_data.get('schedule', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+                        schedule = current_time
                         
                         # Salva no banco local
                         self.db.insertReturnMessages(
@@ -86,9 +170,9 @@ class MessageProcessor:
                             message_custom_id=custom_id,
                             message_order=order,
                             message_schedule=schedule,
-                            readed_at_schedule=schedule,  # mesmo valor do schedule
-                            returned=True,                # foi processado com sucesso
-                            returned_at=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                            readed_at_schedule=current_time,
+                            returned=returned,
+                            returned_at=returned_at
                         )
                         
                         processed_messages.append({
@@ -135,6 +219,4 @@ class MessageProcessor:
         Returns:
             dict: Dados filtrados prontos para processamento
         """
-        # Por enquanto, chama a função existente do filter.py
-        # Quando soubermos o formato exato, podemos expandir aqui
         return process_whatsapp_data(accessibility_data)
